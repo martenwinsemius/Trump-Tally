@@ -1,0 +1,120 @@
+{
+ "updated": "2026-11-17",
+ "items": [
+  {
+   "d": "2025-01-22",
+   "t": "Said the Panama Canal is run by Chinese soldiers. It is operated by an agency of the Panamanian government.",
+   "v": "VRT NWS: incorrect",
+   "s": "https://www.vrt.be/vrtnws/nl/2025/01/22/check-panamakanaal-trump/"
+  },
+  {
+   "d": "2025-01-22",
+   "t": "Said 38,000 Americans died building the Panama Canal. According to fact-checkers, fewer than 1,000 Americans did.",
+   "v": "VRT NWS: false",
+   "s": "https://www.vrt.be/vrtnws/nl/2025/01/22/check-panamakanaal-trump/"
+  },
+  {
+   "d": "2025-02-19",
+   "t": "Called Zelensky a dictator. His term would indeed have ended in peacetime, but elections are suspended because of the war and martial law. The claim leaves out that context.",
+   "v": "NOS: missing context",
+   "s": "https://nos.nl/l/2556555"
+  },
+  {
+   "d": "2025-02-19",
+   "t": "Said the US spent far more on military aid to Ukraine than Europe did. Dutch Defence Minister Brekelmans said this is not correct.",
+   "v": "NOS: not correct (minister)",
+   "s": "https://nos.nl/l/2556727"
+  },
+  {
+   "d": "2025-02-19",
+   "t": "Told Ukraine it should never have started the war. Russia invaded Ukraine in 2022.",
+   "v": "VRT NWS: incorrect",
+   "s": "https://www.vrt.be/vrtnws/nl/2025/02/20/deepfake-video-buikdansende-zelenski/"
+  },
+  {
+   "d": "2025-03-04",
+   "t": "Said in Congress that the US had given Ukraine $350 billion. VRT NWS found the US had not (so far) given that much.",
+   "v": "VRT NWS: does not hold up",
+   "s": "https://www.vrt.be/vrtnws/nl/2025/03/04/factcheck-trump-administratie-zelensky-oekraine/"
+  },
+  {
+   "d": "2026-01-21",
+   "t": "Said in Davos that Europeans would not stand with the US in NATO. The idea that Europeans were unwilling to support the US in the past does not hold up.",
+   "v": "VRT NWS: does not hold up",
+   "s": "https://www.vrt.be/vrtnws/nl/2026/01/21/historische-factcheck-speech-trump/"
+  },
+  {
+   "d": "2026-01-21",
+   "t": "Made several false or misleading statements in Davos about NATO, the history of Greenland and the US housing market.",
+   "v": "PolitiFact: false or misleading",
+   "s": "https://api.politifact.com/article/2026/jan/21/live-fact-check-trump-davos-speech"
+  },
+  {
+   "d": "2026-02-24",
+   "t": "Claimed in the State of the Union that he brought in $18 trillion in foreign investment. The White House’s own website cites a lower figure.",
+   "v": "VRT NWS: no evidence",
+   "s": "https://www.vrt.be/vrtnws/nl/2026/02/25/factcheck-18000-miljard-aan-investeringen-in-vs-trump/"
+  },
+  {
+   "d": "2026-02-24",
+   "t": "Said other countries pay the tariffs. Research shows they are mostly paid by US importers and consumers.",
+   "v": "VRT NWS: false",
+   "s": "https://www.vrt.be/vrtnws/nl/2026/02/25/factcheck-18000-miljard-aan-investeringen-in-vs-trump/"
+  },
+  {
+   "d": "2026-02-24",
+   "t": "Said he inherited record-high inflation. Inflation was 3.0% in January 2025 and 2.4% in January 2026.",
+   "v": "CNN: false",
+   "s": "https://www.yahoo.com/news/articles/fact-check-trump-makes-false-034637779.html"
+  },
+  {
+   "d": "2026-05-23",
+   "t": "Claimed some $18 trillion in investment has come to the US in his second term. The White House’s own website said $10.6 trillion, which CNN says is itself a major exaggeration.",
+   "v": "CNN: false",
+   "s": "https://krdo.com/news/2026/05/23/fact-check-28-separate-false-claims-trump-made-this-week/"
+  },
+  {
+   "d": "2026-05-23",
+   "t": "Said factory construction is rising. According to CNN, spending on manufacturing construction is actually falling.",
+   "v": "CNN: false",
+   "s": "https://krdo.com/news/2026/05/23/fact-check-28-separate-false-claims-trump-made-this-week/"
+  },
+  {
+   "d": "2026-07-08",
+   "t": "Said at the NATO summit in Ankara that record numbers of plants are being built. Federal data shows manufacturing construction spending has fallen steadily during his second term.",
+   "v": "CNN: false",
+   "s": "https://keyt.com/politics/cnn-us-politics/2026/07/08/fact-check-trumps-false-claims-at-his-nato-press-conference/"
+  },
+  {
+   "d": "2026-07-08",
+   "t": "Repeated that 25 million people crossed the border under Biden. CNN calls that figure false; even his earlier 21 million was a wild exaggeration.",
+   "v": "CNN: false",
+   "s": "https://keyt.com/politics/cnn-us-politics/2026/07/08/fact-check-trumps-false-claims-at-his-nato-press-conference/"
+  },
+  {
+   "d": "2026-07-17",
+   "t": "Again accused China of interfering in elections and repeated unfounded claims that voting systems are vulnerable. He offered no evidence, and the claims contradict the conclusions of US intelligence agencies.",
+   "v": "NOS and NU.nl: no evidence",
+   "s": "https://nos.nl/artikel/2623297-trump-beschuldigt-china-weer-van-inmenging-bij-verkiezingen-levert-geen-bewijs",
+   "s2": "https://www.nu.nl/verkiezingen-vs/6403391/trump-herhaalt-onbewezen-claims-over-kiessystemen-vs-en-buitenlandse-inmenging.html"
+  },
+  {
+   "d": "2026-09-09",
+   "t": "Repeated at the Republican convention in Dallas that more than $20 trillion has been invested in the US during his second term.",
+   "v": "CNN: false",
+   "s": "https://keyt.com/politics/cnn-us-politics/2026/09/09/fact-checking-the-republican-midterm-convention-night-1/"
+  },
+  {
+   "d": "2026-09-09",
+   "t": "Again said he achieved “no tax on Social Security” for seniors. CNN calls this a false claim.",
+   "v": "CNN: false",
+   "s": "https://keyt.com/politics/cnn-us-politics/2026/09/09/fact-checking-the-republican-midterm-convention-night-1/"
+  },
+  {
+   "d": "2026-09-29",
+   "t": "Said Americans’ 401(k)s are up by about $46,000. Stocks rose, but PolitiFact says that amount is not supported.",
+   "v": "PolitiFact: mostly false",
+   "s": "https://politifact.com/article/2026/sep/29/a-cheat-sheet-to-trumps-2026-talking-points/"
+  }
+ ]
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tally: Donald Trump’s false claims</title>
+<meta name="description" content="A tally of claims by Donald Trump in his second term that news outlets and fact-checkers found false, misleading or unsupported, with sources.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#eef1f2;--panel:#fbfcfc;--ink:#14213d;--muted:#5b6678;--line:#cfd6dc;--strike:#c0392b;--tally:#14213d;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#1b2623;--panel:#222f2b;--ink:#eef1ea;--muted:#a3b2ab;--line:#3a4a45;--strike:#ff7a66;--tally:#eef1ea;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
+main{max-width:700px;margin:0 auto;padding:28px 18px 60px}
+h1{font-size:1.1rem;font-weight:600;margin:0 0 4px;color:var(--muted)}
+h2{font-size:1.9rem;font-weight:800;margin:0;line-height:1.2}
+.since{color:var(--muted);margin:6px 0 22px;font-size:.95rem}
+.board{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:14px}
+.count{font-size:4.2rem;font-weight:800;line-height:1}
+.count small{font-size:1rem;font-weight:400;color:var(--muted);margin-left:8px}
+.tally{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px 14px;min-height:46px}
+.tally svg{width:44px;height:46px;stroke:var(--tally);stroke-width:3;stroke-linecap:round;fill:none}
+.tally svg .x{stroke:var(--strike)}
+.sync{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:22px}
+button{font:inherit;font-weight:600;cursor:pointer;border-radius:8px;border:1px solid var(--ink);background:var(--ink);color:var(--bg);padding:10px 14px}
+button[disabled]{opacity:.6;cursor:progress}
+#status{color:var(--muted);font-size:.9rem}
+:focus-visible{outline:3px solid var(--strike);outline-offset:2px}
+ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+li{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+li p{margin:0 0 6px;overflow-wrap:anywhere}
+.meta{display:flex;gap:6px 12px;align-items:center;color:var(--muted);font-size:.85rem;flex-wrap:wrap}
+.meta a{color:inherit;overflow-wrap:anywhere}
+.v{border:1px solid var(--line);border-radius:999px;padding:1px 10px;color:var(--ink);font-size:.8rem}
+.note{color:var(--muted);font-size:.85rem;margin-top:26px}
+@media (max-width:480px){.count{font-size:3.4rem}h2{font-size:1.6rem}}
+h3{font-size:1.2rem;margin:34px 0 4px}
+.auto-note{color:var(--muted);font-size:.9rem;margin:0 0 12px}
+.v.un{border-style:dashed;color:var(--muted)}
+li.a a.t{color:var(--ink);font-weight:600;overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<main>
+  <h1>Tally</h1>
+  <h2>Donald Trump: false claims</h2>
+  <p class="since">Since the start of his second term, 20 January 2025. Only claims that news outlets or fact-checkers have checked are included.</p>
+
+  <section class="board" aria-live="polite">
+    <div class="count"><span id="n">0</span><small>claims in the list</small></div>
+    <div class="tally" id="tally"></div>
+  </section>
+
+  <div class="sync">
+    <button id="sync" type="button">Sync</button>
+    <span id="status"></span>
+  </div>
+
+  <ul id="list"></ul>
+
+  <section id="autosec" hidden>
+    <h3>Automatically found, not reviewed</h3>
+    <p class="auto-note">Headlines from NOS, NU.nl and NRC that mention Trump together with words like “false” or “no evidence”. A person has not checked these, they are not counted above, and a headline can also be about claims made by someone else. Open the source to judge for yourself.</p>
+    <ul id="auto"></ul>
+  </section>
+
+  <p class="note">The tally is a selection, not a complete count: many claims are not registered anywhere centrally, and repeats are listed separately where a source covers them separately. Each entry is a short summary; read the source for full context. “Sync” searches the latest NOS, NU.nl and NRC feeds for new articles. To avoid overloading the sources, a real search runs at most once every 15 minutes, and everyone sees the same result.</p>
+</main>
+
+<script type="application/json" id="seed">
+{"updated":"2026-11-17","items":[
+{"d":"2025-01-22","t":"Said the Panama Canal is run by Chinese soldiers. It is operated by an agency of the Panamanian government.","v":"VRT NWS: incorrect","s":"https://www.vrt.be/vrtnws/nl/2025/01/22/check-panamakanaal-trump/"},
+{"d":"2025-01-22","t":"Said 38,000 Americans died building the Panama Canal. According to fact-checkers, fewer than 1,000 Americans did.","v":"VRT NWS: false","s":"https://www.vrt.be/vrtnws/nl/2025/01/22/check-panamakanaal-trump/"},
+{"d":"2025-02-19","t":"Called Zelensky a dictator. His term would indeed have ended in peacetime, but elections are suspended because of the war and martial law. The claim leaves out that context.","v":"NOS: missing context","s":"https://nos.nl/l/2556555"},
+{"d":"2025-02-19","t":"Said the US spent far more on military aid to Ukraine than Europe did. Dutch Defence Minister Brekelmans said this is not correct.","v":"NOS: not correct (minister)","s":"https://nos.nl/l/2556727"},
+{"d":"2025-02-19","t":"Told Ukraine it should never have started the war. Russia invaded Ukraine in 2022.","v":"VRT NWS: incorrect","s":"https://www.vrt.be/vrtnws/nl/2025/02/20/deepfake-video-buikdansende-zelenski/"},
+{"d":"2025-03-04","t":"Said in Congress that the US had given Ukraine $350 billion. VRT NWS found the US had not (so far) given that much.","v":"VRT NWS: does not hold up","s":"https://www.vrt.be/vrtnws/nl/2025/03/04/factcheck-trump-administratie-zelensky-oekraine/"},
+{"d":"2026-01-21","t":"Said in Davos that Europeans would not stand with the US in NATO. The idea that Europeans were unwilling to support the US in the past does not hold up.","v":"VRT NWS: does not hold up","s":"https://www.vrt.be/vrtnws/nl/2026/01/21/historische-factcheck-speech-trump/"},
+{"d":"2026-01-21","t":"Made several false or misleading statements in Davos about NATO, the history of Greenland and the US housing market.","v":"PolitiFact: false or misleading","s":"https://api.politifact.com/article/2026/jan/21/live-fact-check-trump-davos-speech"},
+{"d":"2026-02-24","t":"Claimed in the State of the Union that he brought in $18 trillion in foreign investment. The White House’s own website cites a lower figure.","v":"VRT NWS: no evidence","s":"https://www.vrt.be/vrtnws/nl/2026/02/25/factcheck-18000-miljard-aan-investeringen-in-vs-trump/"},
+{"d":"2026-02-24","t":"Said other countries pay the tariffs. Research shows they are mostly paid by US importers and consumers.","v":"VRT NWS: false","s":"https://www.vrt.be/vrtnws/nl/2026/02/25/factcheck-18000-miljard-aan-investeringen-in-vs-trump/"},
+{"d":"2026-02-24","t":"Said he inherited record-high inflation. Inflation was 3.0% in January 2025 and 2.4% in January 2026.","v":"CNN: false","s":"https://www.yahoo.com/news/articles/fact-check-trump-makes-false-034637779.html"},
+{"d":"2026-05-23","t":"Claimed some $18 trillion in investment has come to the US in his second term. The White House’s own website said $10.6 trillion, which CNN says is itself a major exaggeration.","v":"CNN: false","s":"https://krdo.com/news/2026/05/23/fact-check-28-separate-false-claims-trump-made-this-week/"},
+{"d":"2026-05-23","t":"Said factory construction is rising. According to CNN, spending on manufacturing construction is actually falling.","v":"CNN: false","s":"https://krdo.com/news/2026/05/23/fact-check-28-separate-false-claims-trump-made-this-week/"},
+{"d":"2026-07-08","t":"Said at the NATO summit in Ankara that record numbers of plants are being built. Federal data shows manufacturing construction spending has fallen steadily during his second term.","v":"CNN: false","s":"https://keyt.com/politics/cnn-us-politics/2026/07/08/fact-check-trumps-false-claims-at-his-nato-press-conference/"},
+{"d":"2026-07-08","t":"Repeated that 25 million people crossed the border under Biden. CNN calls that figure false; even his earlier 21 million was a wild exaggeration.","v":"CNN: false","s":"https://keyt.com/politics/cnn-us-politics/2026/07/08/fact-check-trumps-false-claims-at-his-nato-press-conference/"},
+{"d":"2026-07-17","t":"Again accused China of interfering in elections and repeated unfounded claims that voting systems are vulnerable. He offered no evidence, and the claims contradict the conclusions of US intelligence agencies.","v":"NOS and NU.nl: no evidence","s":"https://nos.nl/artikel/2623297-trump-beschuldigt-china-weer-van-inmenging-bij-verkiezingen-levert-geen-bewijs","s2":"https://www.nu.nl/verkiezingen-vs/6403391/trump-herhaalt-onbewezen-claims-over-kiessystemen-vs-en-buitenlandse-inmenging.html"},
+{"d":"2026-09-09","t":"Repeated at the Republican convention in Dallas that more than $20 trillion has been invested in the US during his second term.","v":"CNN: false","s":"https://keyt.com/politics/cnn-us-politics/2026/09/09/fact-checking-the-republican-midterm-convention-night-1/"},
+{"d":"2026-09-09","t":"Again said he achieved “no tax on Social Security” for seniors. CNN calls this a false claim.","v":"CNN: false","s":"https://keyt.com/politics/cnn-us-politics/2026/09/09/fact-checking-the-republican-midterm-convention-night-1/"},
+{"d":"2026-09-29","t":"Said Americans’ 401(k)s are up by about $46,000. Stocks rose, but PolitiFact says that amount is not supported.","v":"PolitiFact: mostly false","s":"https://politifact.com/article/2026/sep/29/a-cheat-sheet-to-trumps-2026-talking-points/"}
+]}
+</script>
+
+<script>
+(function(){
+  var cur, shared={items:[],lastSync:0}, busy=false;
+  try{cur=JSON.parse(document.getElementById("seed").textContent);}catch(e){cur={updated:"",items:[]};}
+  function $(id){return document.getElementById(id);}
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  function fmt(d){var x=new Date(d+"T00:00:00");return isNaN(x)?d:x.toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"});}
+  function safe(u){return /^https?:\/\//i.test(u)?u:"";}
+  function host(u){try{return new URL(u).hostname.replace(/^www\./,"");}catch(e){return "source";}}
+  function group(full){
+    var s='<svg viewBox="0 0 44 46" aria-hidden="true">',i;
+    for(i=0;i<full;i++){s+='<line x1="'+(7+i*10)+'" y1="4" x2="'+(7+i*10)+'" y2="42"/>';}
+    if(full===5){s+='<line class="x" x1="1" y1="36" x2="43" y2="10"/>';}
+    return s+'</svg>';
+  }
+  function link(u){var h=safe(u);return h?'<a href="'+esc(h)+'" target="_blank" rel="noopener noreferrer">'+esc(host(h))+'</a>':"";}
+  function status(t){$("status").textContent=t;}
+  function ago(ms){
+    var m=Math.max(0,Math.round(ms/60000));
+    if(m<1){return "just now";}
+    if(m<60){return m+" min ago";}
+    var h=Math.round(m/60);
+    return h<24?h+" h ago":Math.round(h/24)+" d ago";
+  }
+  function render(){
+    var items=Array.isArray(cur.items)?cur.items:[],n=items.length,t="",g=Math.floor(n/5),r=n%5,i;
+    $("n").textContent=n;
+    for(i=0;i<g;i++){t+=group(5);}
+    if(r){t+=group(r);}
+    $("tally").innerHTML=t;
+    var h="";
+    items.slice().sort(function(x,y){return x.d<y.d?1:x.d>y.d?-1:0;}).forEach(function(it){
+      h+='<li><p>'+esc(it.t)+'</p><div class="meta"><span>'+esc(fmt(it.d))+'</span>'+(it.s?link(it.s):'')+(it.s2?link(it.s2):'')+'<span class="v">'+esc(it.v||"")+'</span></div></li>';
+    });
+    $("list").innerHTML=h;
+  }
+  function renderAuto(){
+    var a=Array.isArray(shared.items)?shared.items:[],h="";
+    $("autosec").hidden=!a.length;
+    a.forEach(function(it){
+      var u=safe(it.link);
+      if(!u){return;}
+      h+='<li class="a"><p><a class="t" href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">'+esc(it.t)+'</a></p><div class="meta"><span>'+esc(fmt(it.d))+'</span><span>'+esc(it.src||host(u))+'</span><span class="v un">Not reviewed</span></div></li>';
+    });
+    $("auto").innerHTML=h;
+  }
+  function validCurated(d){
+    return d&&typeof d.updated==="string"&&Array.isArray(d.items)&&d.items.every(function(x){return x&&typeof x.d==="string"&&typeof x.t==="string";});
+  }
+  async function loadCurated(){
+    try{
+      var res=await fetch("feed.json?ts="+Date.now(),{cache:"no-store"});
+      if(!res.ok){return;}
+      var d=await res.json();
+      if(validCurated(d)&&d.updated>=cur.updated){cur=d;render();}
+    }catch(e){}
+  }
+  function lastLine(){
+    return shared.lastSync?"Last search: "+ago(Date.now()-shared.lastSync)+".":"No search has been run yet.";
+  }
+  async function loadShared(){
+    try{
+      var res=await fetch("/api/feed",{cache:"no-store"});
+      if(!res.ok){throw new Error("HTTP "+res.status);}
+      var d=await res.json();
+      if(d&&Array.isArray(d.items)){shared=d;renderAuto();}
+      if(!busy){status(lastLine());}
+    }catch(e){
+      if(!busy){status("Live updates are unavailable here. Showing the built-in list dated "+fmt(cur.updated)+".");}
+    }
+  }
+  async function sync(){
+    if(busy){return;}
+    busy=true;$("sync").disabled=true;status("Searching NOS, NU.nl and NRC…");
+    try{
+      await loadCurated();
+      var res=await fetch("/api/sync",{method:"POST"});
+      if(!res.ok){throw new Error("HTTP "+res.status);}
+      var d=await res.json();
+      shared=d;renderAuto();
+      var bad=d.errors&&d.errors.length?" Some feeds could not be reached.":"";
+      if(d.cooldown){
+        status("Someone already searched "+ago(Date.now()-d.lastSync)+". Showing that result; a new search is possible in "+Math.max(1,Math.ceil((d.nextAt-Date.now())/60000))+" min.");
+      }else if(d.added>0){
+        status("Searched just now: "+d.added+" new article"+(d.added===1?"":"s")+" found."+bad);
+      }else{
+        status("Searched just now: no new articles found."+bad);
+      }
+    }catch(e){
+      status("Couldn’t search right now. Try again later.");
+    }
+    busy=false;$("sync").disabled=false;
+  }
+  $("sync").addEventListener("click",sync);
+  render();
+  status("List dated "+fmt(cur.updated)+".");
+  if(/^https?:$/.test(location.protocol)){
+    loadCurated();
+    loadShared();
+    setInterval(function(){if(document.visibilityState==="visible"){loadShared();}},120000);
+  }
+})();
+</script>
+</body>
+</html>
